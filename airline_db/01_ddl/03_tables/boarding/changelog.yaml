@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: boarding-009-create-tables
+      author: airline_dev
+      labels: "ddl,boarding,domain"
+      comment: "Create boarding domain tables"
+      changes:
+        - sqlFile:
+            path: 009_create_boarding_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/009_create_boarding_tables.rollback.sql
+            relativeToChangelogFile: false

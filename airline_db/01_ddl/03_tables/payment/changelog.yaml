@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: payment-010-create-tables
+      author: airline_dev
+      labels: "ddl,payment,domain"
+      comment: "Create payment domain tables"
+      changes:
+        - sqlFile:
+            path: 010_create_payment_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/010_create_payment_tables.rollback.sql
+            relativeToChangelogFile: false

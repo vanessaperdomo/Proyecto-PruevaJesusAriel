@@ -1,0 +1,34 @@
+databaseChangeLog:
+
+  - include:
+      file: 00_inserts/001_insert_geography_tables.sql
+
+  - include:
+      file: 00_inserts/002_insert_identity_tables.sql
+
+  - include:
+      file: 00_inserts/003_insert_security_tables.sql
+
+  - include:
+      file: 00_inserts/004_insert_loyalty_tables.sql
+
+  - include:
+      file: 00_inserts/005_insert_airports_tables.sql
+
+  - include:
+      file: 00_inserts/006_insert_aircraft_tables.sql
+
+  - include:
+      file: 00_inserts/007_insert_flight_tables.sql
+
+  - include:
+      file: 00_inserts/008_insert_commercial_tables.sql
+
+  - include:
+      file: 00_inserts/009_insert_boarding_tables.sql
+
+  - include:
+      file: 00_inserts/010_insert_payment_tables.sql
+
+  - include:
+      file: 00_inserts/011_insert_billing_tables.sql

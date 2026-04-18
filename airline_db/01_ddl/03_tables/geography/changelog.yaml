@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: geo-001-create-tables
+      author: airline_dev
+      labels: "ddl,geography,domain"
+      comment: "Create geography domain tables"
+      changes:
+        - sqlFile:
+            path: 001_create_geography_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/001_create_geography_tables.rollback.sql
+            relativeToChangelogFile: false

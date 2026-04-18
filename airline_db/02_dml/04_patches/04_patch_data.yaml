@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: patch-data-001
+      author: tu_nombre
+      changes:
+        - sqlFile:
+            path: 02_dml/04_patches/04_patch_data.sql

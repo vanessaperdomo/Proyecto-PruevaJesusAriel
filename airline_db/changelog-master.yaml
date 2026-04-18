@@ -1,0 +1,37 @@
+databaseChangeLog:
+
+  - include:
+      file: 01_ddl/01_schemas/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/geography/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/identity/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/security/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/loyalty/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/airports/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/aircraft/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/flight/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/commercial/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/boarding/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/payment/changelog.yaml
+
+  - include:
+      file: 01_ddl/03_tables/billing/changelog.yaml

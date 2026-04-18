@@ -1,0 +1,19 @@
+databaseChangeLog:
+
+  - include:
+      file: 02_dml/00_inserts/changelog.yaml
+
+  - include:
+      file: 02_dml/03_upserts/03_upsert_currency.yaml
+
+  - include:
+      file: 02_dml/01_updates/01_update_geography.yaml
+
+  - include:
+      file: 02_dml/04_patches/04_patch_data.yaml
+
+  - include:
+      file: 02_dml/02_deletes/02_delete_reference.yaml
+
+  - include:
+      file: 02_dml/05_validations/validation_queries.yaml

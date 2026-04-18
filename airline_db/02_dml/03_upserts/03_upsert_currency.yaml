@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: upsert-currency-001
+      author: tu_nombre
+      changes:
+        - sqlFile:
+            path: 02_dml/03_upserts/03_upsert_currency.sql

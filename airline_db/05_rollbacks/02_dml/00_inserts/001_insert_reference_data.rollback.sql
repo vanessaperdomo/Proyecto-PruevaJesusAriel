@@ -1,0 +1,23 @@
+-- Rollback reference/seed data inserts
+DELETE FROM loyalty.benefit_type;
+DELETE FROM loyalty.customer_category;
+DELETE FROM aircraft.maintenance_type;
+DELETE FROM commercial.boarding_group;
+DELETE FROM commercial.check_in_status;
+DELETE FROM billing.invoice_status;
+DELETE FROM payment.payment_method;
+DELETE FROM payment.payment_status;
+DELETE FROM aircraft.cabin_class;
+DELETE FROM flight_ops.delay_reason_type;
+DELETE FROM flight_ops.flight_status;
+DELETE FROM commercial.ticket_status;
+DELETE FROM commercial.sale_channel;
+DELETE FROM commercial.reservation_status;
+DELETE FROM security.security_role;
+DELETE FROM identity.contact_type;
+DELETE FROM identity.document_type;
+DELETE FROM identity.person_type;
+DELETE FROM security.user_status;
+DELETE FROM geography.time_zone;
+DELETE FROM geography.continent;
+DELETE FROM geography.currency;

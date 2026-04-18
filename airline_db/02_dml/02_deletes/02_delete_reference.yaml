@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: delete-reference-001
+      author: tu_nombre
+      changes:
+        - sqlFile:
+            path: 02_dml/02_deletes/02_delete_reference.sql

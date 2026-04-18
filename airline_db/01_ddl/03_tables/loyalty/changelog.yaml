@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: loyalty-004-create-tables
+      author: airline_dev
+      labels: "ddl,loyalty,domain"
+      comment: "Create loyalty domain tables"
+      changes:
+        - sqlFile:
+            path: 004_create_loyalty_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/004_create_loyalty_tables.rollback.sql
+            relativeToChangelogFile: false

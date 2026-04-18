@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: billing-011-create-tables
+      author: airline_dev
+      labels: "ddl,billing,domain"
+      comment: "Create billing domain tables"
+      changes:
+        - sqlFile:
+            path: 011_create_billing_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/011_create_billing_tables.rollback.sql
+            relativeToChangelogFile: false

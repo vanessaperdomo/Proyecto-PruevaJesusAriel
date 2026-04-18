@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: sch-001-create-base-schemas
+      author: airline_dev
+      labels: "BD-01-dev,ddl,base,schemas"
+      comment: Creates reference data and geography schemas.
+      changes:
+        - sqlFile:
+            path: 001_create_schemas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/01_schemas/001_create_schemas.rollback.sql
+            relativeToChangelogFile: false
+            stripComments: false
+
+  - changeSet:
+      id: sch-002-create-operational-schemas
+      author: airline_dev
+      labels: "BD-01-dev,ddl,base,schemas"
+      comment: Creates airline operations schemas.
+      changes:
+        - sqlFile:
+            path: 002_create_schemas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/01_schemas/002_create_schemas.rollback.sql
+            relativeToChangelogFile: false
+            stripComments: false
+
+  - changeSet:
+      id: sch-003-create-commercial-schemas
+      author: airline_dev
+      labels: "BD-01-dev,ddl,base,schemas"
+      comment: Creates commercial, payment and audit schemas.
+      changes:
+        - sqlFile:
+            path: 003_create_schemas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/01_schemas/003_create_schemas.rollback.sql
+            relativeToChangelogFile: false
+            stripComments: false

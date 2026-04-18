@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: f5a6b7c8-0001-4001-8001-airline000001
+      author: airline_dev
+      labels: "BD-01-dev,tcl,transaction,booking"
+      comment: "Transaction block for a full airline booking flow with SAVEPOINTs."
+      runOnChange: true
+      changes:
+        - sqlFile:
+            path: 001_transaction_booking_flow.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - empty

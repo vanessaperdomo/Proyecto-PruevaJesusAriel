@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: a0000001-ext0-4000-8000-000000000001
+      author: airline_dev
+      labels: "BD-01-dev,ddl,base,extensions"
+      comment: Enables pgcrypto extension for UUID generation and cryptographic functions.
+      changes:
+        - sqlFile:
+            path: 001_enable_pgcrypto.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/00_extensions/001_enable_pgcrypto.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

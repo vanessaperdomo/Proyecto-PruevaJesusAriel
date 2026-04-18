@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: identity-002-create-tables
+      author: airline_dev
+      labels: "ddl,identity,domain"
+      comment: "Create identity domain tables"
+      changes:
+        - sqlFile:
+            path: 002_create_identity_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/002_create_identity_tables.rollback.sql
+            relativeToChangelogFile: false

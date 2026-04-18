@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: f5a6b7c8-0001-4001-8001-airline000001
+      author: airline_dev
+      labels: "BD-01-dev,dcl,rls,policies,hu-006"
+      comment: "Enables Row-Level Security on sensitive tables and creates access policies per role."
+      changes:
+        - sqlFile:
+            path: 001_rls_policies.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/03_dcl/02_policies/001_rls_policies.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: update-geography-001
+      author: tu_nombre
+      changes:
+        - sqlFile:
+            path: 02_dml/01_updates/01_update_geography.sql

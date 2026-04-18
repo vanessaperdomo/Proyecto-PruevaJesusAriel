@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: security-003-create-tables
+      author: airline_dev
+      labels: "ddl,security,domain"
+      comment: "Create security domain tables"
+      changes:
+        - sqlFile:
+            path: 003_create_security_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/003_create_security_tables.rollback.sql
+            relativeToChangelogFile: false

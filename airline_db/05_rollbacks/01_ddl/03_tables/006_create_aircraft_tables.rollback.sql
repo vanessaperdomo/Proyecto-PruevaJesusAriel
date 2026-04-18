@@ -1,0 +1,10 @@
+-- Rollback aircraft tables (Dominio 6 - reverse FK order)
+DROP TABLE IF EXISTS aircraft.maintenance_event    CASCADE;
+DROP TABLE IF EXISTS aircraft.maintenance_type     CASCADE;
+DROP TABLE IF EXISTS aircraft.maintenance_provider CASCADE;
+DROP TABLE IF EXISTS aircraft.aircraft_seat        CASCADE;
+DROP TABLE IF EXISTS aircraft.aircraft_cabin       CASCADE;
+DROP TABLE IF EXISTS aircraft.aircraft             CASCADE;
+DROP TABLE IF EXISTS aircraft.cabin_class          CASCADE;
+DROP TABLE IF EXISTS aircraft.aircraft_model       CASCADE;
+DROP TABLE IF EXISTS aircraft.aircraft_manufacturer CASCADE;

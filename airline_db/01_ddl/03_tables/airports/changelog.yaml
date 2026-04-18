@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: airports-005-create-tables
+      author: airline_dev
+      labels: "ddl,airports,domain"
+      comment: "Create airports domain tables"
+      changes:
+        - sqlFile:
+            path: 005_create_airports_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/005_create_airports_tables.rollback.sql
+            relativeToChangelogFile: false

@@ -1,0 +1,5 @@
+changeLogFile=changelog-master.yaml
+url=jdbc:postgresql://localhost:5432/airline_db
+username=airline_user
+password=airline_password
+driver=org.postgresql.Driver

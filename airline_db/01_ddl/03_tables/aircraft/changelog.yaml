@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: aircraft-006-create-tables
+      author: airline_dev
+      labels: "ddl,aircraft,domain"
+      comment: "Create aircraft domain tables"
+      changes:
+        - sqlFile:
+            path: 006_create_aircraft_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/006_create_aircraft_tables.rollback.sql
+            relativeToChangelogFile: false

@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: commercial-008-create-tables
+      author: airline_dev
+      labels: "ddl,commercial,domain"
+      comment: "Create commercial domain tables"
+      changes:
+        - sqlFile:
+            path: 008_create_commercial_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/008_create_commercial_tables.rollback.sql
+            relativeToChangelogFile: false

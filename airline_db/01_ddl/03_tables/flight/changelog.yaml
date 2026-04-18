@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: flight-007-create-tables
+      author: airline_dev
+      labels: "ddl,flight,domain"
+      comment: "Create flight domain tables"
+      changes:
+        - sqlFile:
+            path: 007_create_flight_tables.sql
+            relativeToChangelogFile: true
+
+      rollback:
+        - sqlFile:
+            path: 05_rollbacks/01_ddl/03_tables/007_create_flight_tables.rollback.sql
+            relativeToChangelogFile: false
